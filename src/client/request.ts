@@ -1,13 +1,13 @@
 import axios from "axios";
 import APIError from "./APIError";
-import { Client } from "./client";
+import { BrawlClient } from "./client";
 import { Player } from "./player";
 
 const baseURL = "https://api.brawlstars.com/v1";
 
 export default class request {
-  client: Client;
-  constructor(client: Client) {
+  client: BrawlClient;
+  constructor(client: BrawlClient) {
     this.client = client;
   }
 

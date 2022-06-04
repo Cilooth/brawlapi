@@ -1,7 +1,7 @@
 import { Player } from "./player";
 import request from "./request";
 
-export class Client {
+export class BrawlClient {
   token: string;
   request: request;
   constructor(token: string) {
