@@ -108,19 +108,19 @@ export class Player implements PlayerInterface {
 
   getStarPowerCount(): number {
     return this.brawlers.reduce((acc, brawler) => {
-      return acc + (brawler.starPowers ? brawler.starPowers.length : 0);
+      return acc + brawler.starPowers.length;
     }, 0);
   }
 
   getGadgetCount(): number {
     return this.brawlers.reduce((acc, brawler) => {
-      return acc + (brawler.gadgets ? brawler.gadgets.length : 0);
+      return acc + brawler.gadgets.length;
     }, 0);
   }
 
   getGearCount(): number {
     return this.brawlers.reduce((acc, brawler) => {
-      return acc + (brawler.gears ? brawler.gears.length : 0);
+      return acc + brawler.gears.length;
     }, 0);
   }
 }

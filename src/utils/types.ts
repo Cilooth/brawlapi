@@ -30,9 +30,9 @@ export interface BrawlerInterface {
   rank: number;
   trophies: number;
   highestTrophies: number;
-  gears: GearInterface[] | null;
-  starPowers: StarPowerInterface[] | null;
-  gadgets: GadgetInterface[] | null;
+  gears: GearInterface[] | Array<null>;
+  starPowers: StarPowerInterface[] | Array<null>;
+  gadgets: GadgetInterface[] | Array<null>;
 }
 
 export interface PlayerInterface {
