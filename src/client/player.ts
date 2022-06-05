@@ -1,7 +1,8 @@
 import axios from "axios";
 import {
+    BattleListInterface,
   BrawlerInterface,
-  ClubInterface,
+  SmallClubInterface,
   IconInterface,
   PlayerInterface,
 } from "../utils/types";
@@ -25,10 +26,10 @@ export class Player implements PlayerInterface {
   starPowerCount: number;
   gadgetCount: number;
   gearsCount: number;
-  club: ClubInterface | null;
+  club: SmallClubInterface | null;
   brawlers: BrawlerInterface[];
 
-  constructor(data: PlayerInterface) {
+  constructor(data: any) {
     this.tag = data.tag;
     this.name = data.name;
     this.nameColor = data.nameColor;
@@ -40,16 +41,16 @@ export class Player implements PlayerInterface {
     this.expPoints = data.expPoints;
     this.isQualifiedFromChampionshipChallenge =
       data.isQualifiedFromChampionshipChallenge;
-    this.trioVictories = data["3vs3Victories"];
+    this.trioVictories = data.trioVictories;
     this.soloVictories = data.soloVictories;
     this.duoVictories = data.duoVictories;
     this.bestRoboRumbleTime = data.bestRoboRumbleTime;
     this.brawlersCount = data.brawlers.length;
+    this.club = data.club;
+    this.brawlers = data.brawlers;
     this.starPowerCount = this.getStarPowerCount();
     this.gadgetCount = this.getGadgetCount();
     this.gearsCount = this.getGearCount();
-    this.club = data.club;
-    this.brawlers = data.brawlers;
   }
 
   getTotalWins(): number {
