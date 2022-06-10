@@ -1,6 +1,6 @@
 import axios from "axios";
 import {
-    BattleListInterface,
+  BattleListInterface,
   BrawlerInterface,
   SmallClubInterface,
   IconInterface,
