@@ -1,5 +1,5 @@
 import {
-    BaseBrawlerInterface,
+  BaseBrawlerInterface,
   BattleListInterface,
   ClubInterface,
   CountryCode,

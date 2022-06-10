@@ -22,7 +22,7 @@ export class Club implements ClubInterface {
     this.trophies = data.trophies;
     this.members = data.members;
     this.memberCount = this.members.length;
-    this.isFull = this.memberCount == 30
+    this.isFull = this.memberCount == 30;
   }
 
   getMemberRank(tag: string): number {
