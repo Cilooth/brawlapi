@@ -54,3 +54,14 @@ export class BrawlClient {
     return response;
   }
 }
+
+export {
+  Player,
+  Brawlers,
+  Club, 
+  CountryCode,
+  Events,
+  Ranking,
+  RankingType,
+  BattleListInterface
+}
